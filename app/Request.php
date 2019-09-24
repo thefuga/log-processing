@@ -6,7 +6,7 @@ use App\BaseModel;
 
 class Request extends BaseModel
 {
-    public function consumerSolicitation()
+    use Concerns\HasRandomUuid;
     {
 	$this->hasOne(ConsumerSolicitation::class);
     }
