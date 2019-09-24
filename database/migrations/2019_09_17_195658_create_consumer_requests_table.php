@@ -20,15 +20,10 @@ class CreateConsumerRequestsTable extends Migration
 		  ->references('id')
 		  ->on('consumers')
 		  ->ondelete('cascade');
-	    $table->uuid('request_id');
-	    $table->foreign('request_id')
-		  ->references('id')
-		  ->on('requests')
-		  ->ondelete('cascade');
-	    $table->string('started_at');
-	    $table->string('upstream_uri');
+	    $table->string('started_at')->nullable();
+	    $table->string('upstream_uri')->nullable();
 	    $table->json('latencies');
-	    $table->ipAddress('client_ip');
+	    $table->ipAddress('client_ip')->nullable();
             $table->timestamps();
         });
     }

@@ -20,10 +20,15 @@ class CreateRequestsTable extends Migration
 		  ->references('id')
 	          ->on('routes')
 	          ->onDelete('cascade');
+	    $table->uuid('consumer_request_id');
+	    $table->foreign('consumer_request_id')
+		  ->references('id')
+	          ->on('consumer_requests')
+	          ->onDelete('cascade');
 	    $table->string('method', 8);
 	    $table->string('uri');
 	    $table->string('url');
-	    $table->string('querystring');
+	    $table->string('querystring')->nullable();
 	    $table->unsignedTinyInteger('size');
 	    $table->jsonb('headers');
 	    $table->timestamps();
