@@ -2,12 +2,12 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use App\BaseModel;
 
-class Consumer extends Model
+class Consumer extends BaseModel
 {
-    public function consumerSolicitations()
+    public function consumerRequests()
     {
-	$this->hasMany(ConsumerSolicitation::class);
+        return $this->hasMany(ConsumerRequest::class);
     }
 }
