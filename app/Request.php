@@ -7,17 +7,19 @@ use App\BaseModel;
 class Request extends BaseModel
 {
     use Concerns\HasRandomUuid;
+
+    public function consumerRequest()
     {
-	$this->hasOne(ConsumerSolicitation::class);
+        return $this->belongsTo(ConsumerRequest::class);
     }
 
     public function route()
     {
-	$this->belongsTo(Route::class);
+        return $this->belongsTo(Route::class);
     }
 
     public function response()
     {
-	$this->hasOne(Response::class);
+        return $this->hasOne(Response::class);
     }
 }

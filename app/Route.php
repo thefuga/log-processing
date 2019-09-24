@@ -8,11 +8,11 @@ class Route extends BaseModel
 {
     public function service()
     {
-	$this->belongsTo(Service::class);
+        return $this->belongsTo(Service::class);
     }
 
     public function requests()
     {
-	$this->hasMany(Request::class);
+        return $this->hasMany(Request::class);
     }
 }

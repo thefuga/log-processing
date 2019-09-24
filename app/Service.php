@@ -8,11 +8,11 @@ class Service extends BaseModel
 {
     public function route()
     {
-	$this->hasOne(Route::class);
+        return $this->hasOne(Route::class);
     }
 
     public function requests()
     {
-	$this->hasManyThrough(Request::class, Route::class);
+        return $this->hasManyThrough(Request::class, Route::class);
     }
 }
