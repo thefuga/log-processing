@@ -16,10 +16,10 @@ class CreateServicesTable extends Migration
         Schema::create('services', function (Blueprint $table) {
             $table->uuid('id')->primary();
 	    $table->unsignedTinyInteger('retries');
-	    $table->unsignedSmallInteger('connect_timeout');
-	    $table->unsignedSmallInteger('read_timeout');
-	    $table->unsignedSmallInteger('write_timeout');
-	    $table->unsignedSmallInteger('port');
+	    $table->unsignedInteger('connect_timeout');
+	    $table->unsignedInteger('read_timeout');
+	    $table->unsignedInteger('write_timeout');
+	    $table->unsignedInteger('port');
 	    $table->string('host');
 	    $table->string('name');
 	    $table->string('path');
