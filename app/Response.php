@@ -2,9 +2,9 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use App\BaseModel;
 
-class Response extends Model
+class Response extends BaseModel
 {
     public function request()
     {

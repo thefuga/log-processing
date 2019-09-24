@@ -2,9 +2,9 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use App\BaseModel;
 
-class Request extends Model
+class Request extends BaseModel
 {
     public function consumerSolicitation()
     {

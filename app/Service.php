@@ -2,9 +2,9 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use App\BaseModel;
 
-class Service extends Model
+class Service extends BaseModel
 {
     public function route()
     {
