@@ -13,7 +13,7 @@ class RequestsPerServiceCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'service:requests_count {output_file}';
+    protected $signature = 'service:requests {output_file}';
 
     /**
      * The description of the command.

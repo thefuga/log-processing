@@ -13,7 +13,7 @@ class RequestsPerConsumerCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'consumer:requests_count {output_file}';
+    protected $signature = 'consumer:requests {output_file}';
 
     /**
      * The description of the command.
